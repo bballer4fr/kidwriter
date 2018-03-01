@@ -1,0 +1,159 @@
+/*page container*/
+* {margin:0;padding:0}
+
+html 
+{
+	min-width:1000px; 
+	height:700%;
+	font-size: 1.5em;
+	color: red;
+}
+
+@font-face
+{
+	font-family: Grinched;
+	src: url('Grinched.ttf'),
+	url('Grinched.eot');
+}
+
+head 
+{
+	font-family: 'Grinched', Times, serif; 
+	font-size: 1.5em;
+	color: red;
+	height:80%; 
+}
+
+
+body {
+	background-image: url("../images/blank.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Grinched', Times, serif; 
+	text-shadow: .7px .7px .7px #000000;
+	font-size: 1.5em;
+	color: white;
+	height:80%; 
+}
+
+form {
+	background-image: url("../images/blank.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Grinched', Times, serif; 
+	text-shadow: .7px .7px .7px #000000;
+	font-size: 1.0em;
+	color: red;
+	height:80%; 
+}
+
+label {
+	background-image: url("../images/blank.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Grinched', Times, serif; 
+	text-shadow: .7px .7px .7px #000000;
+	font-size: 1.0em;
+	color: white;
+	height:80%; 
+}
+
+
+img {
+	border: inset;
+	border-color: #FFFFFF #F2F2F2
+	
+}
+#subtext {
+	font-family: 'Grinched', Times, serif; 
+	text-shadow: .7px .7px .7px #000000;
+	font-size: 0.6em;
+	color: red;
+	height:80%; 
+}
+
+#resultArea {
+	font-family: 'Grinched', Times, serif; 
+	text-shadow: .7px .7px .7px #000000;
+	color: white;
+}
+
+#the_lorax {
+	border:none;
+}
+#the_stump {
+	border:none;
+}
+#the_cat {
+	border:none;
+}
+
+
+
+	
+	
+	
+	
+/*
+ header {
+	text-shadow: .15px .15px .15px #000000;
+}
+
+#g {
+	color:green;
+}
+
+#cih {
+	color: white;
+	
+}
+*/
+
+#hh {
+	color:red;
+}
+
+ul#charlist {
+    list-style: square;
+
+} 
+
+
+h2{
+	color:green;
+	
+}
+
+
+/*h4{
+	color:blue;
+	
+}*/
+
+#t2 {
+	color:white;
+	
+}
+
+a:link {
+	color:red;
+outline:none;
+}
+
+/* visited link */
+a:visited {
+    color:orange;
+}
+
+/* mouse over link */
+a:hover {
+    color:green;
+}
+
+#quizButton{
+    font-family: Grinched;
+	font-size: 1em;
+	box-shadow:  .5px .5px .5px #000000;
+	color:red;
+}
+

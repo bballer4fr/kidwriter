@@ -1,0 +1,749 @@
+<!doctype html>
+<html> 
+	<!--script type="text/javascript" src="js/jquery-1.3.1.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.timers-1.1.2.js" ></script-->
+	<script type="text/javascript">
+			$(document).ready(function(){
+									 
+			  $("#the_lorax").everyTime(1500, function(){						 
+				 $("#the_lorax").animate({top:"370px"}, 1500).animate({top:"550px"}, 2000);	
+			  });
+			
+		   });
+
+	</script>
+	<style type="text/css">
+
+		#the_stump{
+			width:255px;
+			height:275px;
+			position:fixed;
+			top:500px;
+			left:850px;
+		}
+		#the_lorax{
+			width:210px;
+			height:200px;
+			position:fixed;
+			top:540px;
+			left:860px;
+		}
+		
+		#the_cat{
+			width:690px;
+			height:800px;
+			position:fixed;
+			top:1px;
+			left:870px;
+		}
+		
+		
+		
+		#the_cat_gif{
+			width:500px;
+			top:1px;
+			display: none;
+			border: 1px solid;
+			box-shadow: 10px 10px 5px grey;		
+		}
+
+		#the_grinch_gif{
+			width:500px;
+			top:1px;
+			display: none;
+			border: 1px solid;
+			box-shadow: 10px 10px 5px black;		
+		}
+
+		#the_lorax_gif{
+			width:500px;
+			top:1px;
+			display: none;
+			border: 1px solid;
+			box-shadow: 10px 10px 5px grey;		
+		}
+
+		#horton_gif{
+			width:500px;
+			top:1px;
+			display: none;	
+			align: left;
+			border: 1px solid;
+			box-shadow: 10px 10px 5px grey;		
+		}
+		
+		#resultArea{
+			width:600px;
+			top:1px;
+			display: none;
+			left:500px;
+		}		
+		
+
+
+				
+	</style>
+	<head> 
+		<!-- Created by Ron Hargrove
+		-->	
+		<title>Choose your Seuss</title> 
+		<!-- Style Sheet reference -->
+		<link href="css/seuss.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+			
+		</script>
+	</head> 
+	<body> 
+		<header>
+			<!-- Navigation links -->
+			&nbsp &nbsp
+			<a href="Quiz.html">Reload Quiz</a> &nbsp &nbsp
+		</header>
+
+		<hr width=75%> 	
+		<div>
+			<!--table containing Seusslike portrait and personal quote-->
+			<table width=85% align="center">
+				<tr>
+					<td align="center" valign="top" width=30%><a><img src="images/SeussThumb.jpg"/></a></td>
+					<td align="left" valign="top"width=70%>
+						<h2>If the Seuss fits, share it!</h2><br>
+						<h5> "You should keep reading books. You should keep doing math.<br> 
+								Cause the sharper the mind means a much brighter path.<br> 
+								And the brighter the path makes it easy to know<br> 
+								All the places in life...<br> 
+								You are destined to go." - Ron Hargrove </h5>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<hr width=75% align="right"> 	
+
+		<!-- div style="margin-top:75px; text-align:center"-->
+		<br/>
+
+			<table width="80%" id="imageTab">
+				<tr>
+					<td width="90%" align="center" valign="top">
+						<h1>Choose your Seuss</h1>
+						<form> 
+						
+							<!-- Question 1 -->
+							<br>
+							At the break of the morn, On a dawn of the day,<br>
+							It is best to enjoy it at 
+
+							<input type="radio" name="firstVerse" id="work" value="work">
+							<label for "work"> work </label>
+							or at 
+							<input type="radio" name="firstVerse" id="play" value="play">
+							<label for "play"> play </label>.
+
+							<br><br><hr width=20%><br>
+
+							<!-- Question 2 -->
+							Are you <input type="radio" name="secondVerse" id="messy" value="messy">
+							<label for "messy"> messy </label>or 
+							<input type="radio" name="secondVerse" id="neat" value="neat">
+							<label for "neat"> neat </label>? Shout it loudly my friend.<br>
+							Shout it thrice for good measure, then shout it again. 
+
+							<br><br><hr width=20%><br>
+
+							
+							<!-- Question 3 -->
+							What color EXCITES you? Perhaps it is 
+							<input type="radio" name="thirdVerse" id="blue" value="blue">
+								<label for "blue"> blue</label>?<br>
+							Or <input type="radio" name="thirdVerse" id="black" value="black">
+								<label for "black"> black </label>
+							, maybe <input type="radio" name="thirdVerse" id="green" value="green">
+								<label for "green"> green </label>
+							surely  <input type="radio" name="thirdVerse" id="orange" value="orange">
+								<label for "orange"> orange </label>
+							would do.
+
+							<br><br><hr width=20%><br>								
+
+
+							<!-- Question 4 -->
+							Have you lived for a while? A little, or some? <br>
+							Oh, please, please, please tell me what age you've become.
+							<p id="subtext">(Accepts NUMBERS ONLY - so please don't be dumb.)</p>
+								<input type="text" name="fourthVerse" id="fourthVerse" value="">
+
+								<br><br><hr width=20%><br>
+
+
+							<!-- Question 5 -->
+							So what do you do when the work is all done? <br> 
+							<input type="radio" name="fifthVerse" id="nature" value="nature">
+								<label for "nature"> Enjoy mother nature</label>?
+							<input type="radio" name="fifthVerse" id="mischief" value="mischief">
+								<label for "mischief"> Cause mischief for fun</label>? <br>
+							The type who might like to go 
+							<input type="radio" name="fifthVerse" id="pool" value="pool">
+								<label for "pool"> dip in the pool</label> <br>
+							Or<input type="radio" name="fifthVerse" id="none" value="none">
+								<label for "none"> none of those things</label>, 
+							which is certainly cool.
+							
+							<br><br><hr width=20%><br>
+
+
+							<!-- Question 6 -->
+							I'm anxious to know which season is best.<br>
+							Which time of the year just eclipses the rest?<br>
+							Is it <input type="radio" name="sixthVerse" id="winter" value="winter">
+							<label for "winter">Winter</label> when snow slowly flutters around?<br>
+							Is it <input type="radio" name="sixthVerse" id="spring" value="spring">
+							<label for "spring">Spring</label> when the flower sprout up from the ground?<br>
+							Maybe <input type="radio" name="sixthVerse" id="fall" value="fall">
+							<label for "fall">Fall</label> when the trees shed their leaves when their done.<br>
+							Or the <input type="radio" name="sixthVerse" id="summer" value="summer">
+							<label for "summer">Summer</label> when folks like to run in the sun.
+
+					
+							<br><br><hr width=20%><br>								
+
+								
+							<!-- Question 7 -->
+							And speaking of running, Do you run a lot?<br>
+							Are you trying your best to be <input type="radio" name="seventhVerse" id="active" value="active">
+							<label for "active">Active</label>
+							or
+							<input type="radio" name="seventhVerse" id="notactive" value="notactive">
+							<label for "notactive">Not</label>
+							? <br>
+							'Cause running and jumping helps keep you ALIVE!<br>
+							It gives you that VERVE - That reason to strive!<br>
+							That Zip! That ZoOM! That va-Va-VA-VOOOOOM...<br><br><br>
+							...while laziness likely will lead to your doom.
+
+							
+							<br><br><hr width=20%><br>
+
+
+							<!-- Question 8 -->
+							Do you reach to the sky? Are you 
+							<input type="radio" name="eighthVerse" id="tall" value="tall">
+							<label for "tall">tall</label>
+							as a pine?<br>
+							
+							Or maybe you're 
+							<input type="radio" name="eighthVerse" id="short" value="short">
+							<label for "short">short</label> which is perfectly fine...<br><br><br>
+							
+							
+							Just not as a Basket-hoop teammate of mine.
+
+							
+							<br><br><hr width=20%><br>
+
+
+							<!-- Question 9 -->
+							Do you like to 
+							<input type="radio" name="ninthVerse" id="relax" value="relax">
+							<label for "relax">relax, drift and rest</label> like a dinghy?<br>
+							Do you 
+							<input type="radio" name="ninthVerse" id="troll" value="troll">
+							<label for "troll">troll all about</label> on the inter-web-thingie?<br>
+							Do you 
+							<input type="radio" name="ninthVerse" id="bounce" value="bounce">
+							<label for "bounce">bounce off the walls</label> like a box mattress spring?<br>
+							Or just 
+							<input type="radio" name="ninthVerse" id="worry" value="worry">
+							<label for "worry">worry and brood</label> about everything.
+	
+							<br><br><hr width=20%><br><br>
+															
+
+
+							<!-- Question 10 -->
+							And lastly, what creature describes you the best?<br>
+							What animal captures you more than the rest? <br>
+							You could be an everyday 
+							<input type="radio" name="tenthVerse" id="gorilla" value="gorilla">
+							<label for "gorilla">Homa-pri-doodle</label>?<br>
+							Or are you a  
+							<input type="radio" name="tenthVerse" id="feline" value="feline">
+							<label for "feline">Bonna-felinia-noodle </label>?<br>
+							You might be a 
+							<input type="radio" name="tenthVerse" id="otter" value="otter">
+							<label for "otter">Whisker-zoo-musteli-banger </label>?<br>
+							Perhaps, just perhaps you're a 
+							<input type="radio" name="tenthVerse" id="elephant" value="elephant">
+							<label for "elephant">Probo-win-hanger </label>?<br>
+							
+							But wait... <br><br>
+							
+							<p align=left>
+							&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; I<br><br>
+							&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Think <br><br>
+							&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; I've <br><br>
+							&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Got it.<br><br>
+							</p>
+					
+							I've figured this thing out! The moment is near!<br>
+							You're answers have made your identity clear!<br>
+							I'll show you who you are! I'll prove what I Know!<br>
+							Just click on the spot labeled "sneedle" below.
+							
+							
+							<br><br><hr width=20%><br>
+							
+							<input type="button" id="quizButton" value="  sneedle  ">
+								
+							<br><br><a><img src="images/grinchFace.jpg" id="the_grinch_gif" height="300px"  width="500px"/></a>
+						
+							<br><br><a><img src="images/Horton2.jpg" id="horton_gif" height="300px"  width="500px" /></a>
+						
+							<br><br><a><img src="images/LoraxFace.jpg" id="the_lorax_gif" height="300px"  width="500px"/></a>
+						
+							<br><br><a><img src="images/CatInTheHat2.jpg"  id="the_cat_gif" height="300px"  width="500px" /></a>
+
+						</form>		
+						
+						<p id="resultArea" ></p> 	
+						
+
+						<!-- Scripting begin-->
+						<script>
+						
+						//access quiz button and wait for click
+
+
+						var messResult;
+						var validForm = 0;
+						var button = document.getElementById("quizButton");
+						button.onclick = validateQuiz;
+						if (validForm === 1)
+						{
+							processResults;
+						}
+						
+						//validate all fields are filled in and conatin valid data
+						function validateQuiz() 
+						{
+							document.getElementById("the_grinch_gif").style.display = "none";
+							document.getElementById("the_cat_gif").style.display = "none";
+							document.getElementById("the_lorax_gif").style.display = "none";
+							document.getElementById("horton_gif").style.display = "none";
+							document.getElementById("resultArea").style.display = "none";
+							messResult =  "<br>" ;
+							validForm = 0
+							//alert("Validate button pushed.");
+							
+							var validValue;
+							var inputs;						
+							//create a variable to store the user's image
+
+							var firstVerse;
+							inputs	= document.getElementsByName("firstVerse");						
+							firstVerse = findValue(inputs);					
+							if (firstVerse === undefined)
+							{	
+								validForm = 1;
+								messResult +=  "<br>- First question not filled in";
+							}
+
+							var secondVerse;
+							inputs	= document.getElementsByName("secondVerse");						
+							secondVerse = findValue(inputs);					
+							if (secondVerse === undefined)
+							{
+								validForm = 1;
+								messResult +=  "<br>- Second question not filled in";							
+							}
+
+							var thirdVerse;
+							inputs	= document.getElementsByName("thirdVerse");						
+							thirdVerse = findValue(inputs);					
+							if (thirdVerse === undefined)
+							{
+								validForm = 1;
+								messResult +=  "<br>- Third question not filled in"	;						
+							}
+
+							//check to see if text field contains numeric data
+							var val = document.getElementById("fourthVerse").value;
+							//alert(val);
+							if (val== null || val == "")
+							{	
+								//alert("Fourth verse empty");
+								validForm = 1;
+								messResult +=  "<br>- Fourth question not filled in";								
+							}else 
+							{
+								Number(val);
+								if(isNaN(val))
+								{ 	
+									//alert("Fourth verse not a number.");
+									validForm = 1;
+									messResult +=  "<br>- Fourth response must be a number";									
+								}else
+								{
+									console.log(val);
+
+								}
+								
+							}
+
+							var fifthVerse;
+							inputs	= document.getElementsByName("fifthVerse");						
+							fifthVerse = findValue(inputs);					
+							if (fifthVerse === undefined)
+							{
+								validForm = 1;
+								messResult +=  "<br>- Fifth question not filled in"	;					
+							}
+
+							var sixthVerse;
+							inputs	= document.getElementsByName("sixthVerse");						
+							sixthVerse = findValue(inputs);					
+							if (sixthVerse === undefined)
+							{
+								validForm = 1;
+								messResult +=  "<br>- Sixth question not filled in"	;					
+							}
+
+
+							var seventhVerse;
+							inputs	= document.getElementsByName("seventhVerse");						
+							seventhVerse = findValue(inputs);					
+							if (seventhVerse === undefined)
+							{
+								validForm = 1;
+								messResult +=  "<br>- Seventh question not filled in";					
+
+							}
+
+							var eighthVerse;
+							inputs	= document.getElementsByName("eighthVerse");						
+							eighthVerse = findValue(inputs);			
+							if (eighthVerse === undefined)
+							{
+								validForm = 1;
+								messResult +=  "<br>- Eighth question not filled in";
+							}
+
+							var ninthVerse;
+							inputs	= document.getElementsByName("ninthVerse");						
+							ninthVerse = findValue(inputs);					
+							if (ninthVerse === undefined)
+							{
+								validForm = 1;
+								messResult +=  "<br>- Ninth question not filled in"	;					
+							}
+
+							var tenthVerse;
+							inputs	= document.getElementsByName("tenthVerse");						
+							tenthVerse = findValue(inputs);					
+							if (tenthVerse === undefined)
+							{
+								validForm = 1;
+								messResult +=  "<br>- Tenth question not filled in";						
+							}
+
+
+							if (validForm === 0)
+							{
+
+
+							/***************************/
+							/***************************/
+								var grinchScore = 0;
+								var hortonScore = 0;
+								var loraxScore = 0;
+								var catScore = 0;
+								
+								
+								
+															
+								//create a variable to store the user's image
+								var firstVerse;
+								var inputs	= document.getElementsByName("firstVerse");						
+								firstVerse = findValue(inputs);					
+								//document.getElementById("resultArea").innerHTML = firstVerse
+								if (inputs.value == "work")
+								{
+									loraxScore++;
+									grinchScore++;
+
+								}else{
+									catScore++;
+									hortonScore++;								
+								}
+								
+								var secondVerse;
+								var inputs	= document.getElementsByName("secondVerse");						
+								secondVerse = findValue(inputs);
+								//document.getElementById("resultArea").innerHTML +=  "<br> " + secondVerse
+								if (inputs.value = "messy")
+								{
+									catScore++;
+									grinchScore++;
+
+								}else{
+									loraxScore++;
+									hortonScore++;								
+								}
+								//alert("Horton's score is " + hortonScore);	
+								
+								var thirdVerse;
+								var inputs	= document.getElementsByName("thirdVerse");						
+								thirdVerse = findValue(inputs);
+								//document.getElementById("resultArea").innerHTML +=  "<br> " + thirdVerse						
+								switch(thirdVerse)
+									{
+									case "green":
+										grinchScore++;
+										break;
+									case "black":
+										catScore++;
+										break;
+									case "blue":
+										hortonScore++;
+										break;
+									case "fall":
+										loraxScore++;
+										break;
+								
+									}
+								//alert("Horton's score is " + hortonScore);		
+									
+								var fourthVerse;
+								var inputs	= document.getElementsByName("fourthVerse");						
+								//document.getElementById("resultArea").innerHTML +=  "<br> " + fourthVerse
+								/*#########################
+								###########################
+								###########################
+								#########################*/
+									
+								var fifthVerse;
+								var inputs	= document.getElementsByName("fifthVerse");						
+								fifthVerse = findValue(inputs);
+								//document.getElementById("resultArea").innerHTML +=  "<br> " + fifthVerse
+								switch(sixthVerse)
+									{
+									case "none":
+										grinchScore++;
+										break;
+									case "mischief":
+										catScore++;
+										break;
+									case "pool":
+										hortonScore++;
+										break;
+									case "nature":
+										loraxScore++;
+										break;
+								
+									}
+								//alert("Horton's score is " + hortonScore);	
+								
+								var sixthVerse;
+								var inputs	= document.getElementsByName("sixthVerse");						
+								sixthVerse = findValue(inputs);
+								//document.getElementById("resultArea").innerHTML +=  "<br> " + sixthVerse
+								
+								
+								/*****************************/
+								switch(sixthVerse)
+									{
+									case "winter":
+										grinchScore++;
+										break;
+									case "spring":
+										catScore++;
+										break;
+									case "summer":
+										hortonScore++;
+										break;
+									case "fall":
+										loraxScore++;
+										break;
+								
+									}
+								/*****************************/
+								
+								//alert("Horton's score is " + hortonScore);	
+
+
+
+								var seventhVerse;
+								var inputs	= document.getElementsByName("seventhVerse");						
+								seventhVerse = findValue(inputs);
+								//document.getElementById("resultArea").innerHTML +=  "<br> " + seventhVerse
+								if (inputs.value == "active")
+								{
+									catScore++;
+									loraxScore++;
+								}else{
+									hortonScore++; 
+									grinchScore++;
+								}
+								//alert("Horton's score is " + hortonScore);	
+
+								var eighthVerse;
+								var inputs	= document.getElementsByName("eighthVerse");						
+								eighthVerse = findValue(inputs);
+								//document.getElementById("resultArea").innerHTML +=  "<br> " + eighthVerse
+								if (inputs.value == "tall")
+								{
+									catScore++;
+									hortonScore++; 
+									grinchScore++;								
+								}else{
+									loraxScore++;
+								}
+								//alert("Horton's score is " + hortonScore);	
+
+								var ninthVerse;
+								var inputs	= document.getElementsByName("ninthVerse");						
+								ninthVerse = findValue(inputs);
+								//document.getElementById("resultArea").innerHTML +=  "<br> " + ninthVerse
+								switch(sixthVerse)
+									{
+									case "troll":
+										grinchScore++;
+										break;
+									case "bounce":
+										catScore++;
+										break;
+									case "relax":
+										hortonScore++;
+										break;
+									case "worry":
+										loraxScore++;
+										break;
+								
+									}
+								//alert("Horton's score is " + hortonScore);	
+								
+								var tenthVerse;
+								var inputs	= document.getElementsByName("tenthVerse");						
+								tenthVerse = findValue(inputs);
+								//document.getElementById("resultArea").innerHTML +=  "<br> " + tenthVerse		
+								switch(sixthVerse)
+									{
+									case "gorilla":
+										grinchScore++;
+										break;
+									case "feline":
+										catScore++;
+										break;
+									case "elephant":
+										hortonScore++;
+										break;
+									case "otter":
+										loraxScore++;
+										break;
+								
+									}
+								//alert("Horton's score is " + hortonScore);	
+									
+	var scoreArray = [grinchScore, catScore, loraxScore, hortonScore];
+								
+    var highScoreSoFar = 0;
+    var highest;
+	
+	//alert(scoreArray);
+    for (var i = 0; i < scoreArray.length; i++) {
+       if (scoreArray[i] > highScoreSoFar) {
+            // new high score so start a new array with this player in it
+            highScoreSoFar = scoreArray[i];
+			highest = i;
+			//alert("highest index is " + highest);
+			//alert("Highest value is "  + highScoreSoFar);
+			
+
+        }
+    }
+								
+								
+								if ((grinchScore > loraxScore) && (grinchScore > catScore) && (grinchScore > hortonScore))
+								{	alert("GS" + grinchScore);
+								
+									document.getElementById("the_grinch_gif").style.display = "block";
+									document.getElementById("resultArea").style.display = "none";
+								}
+								if ((loraxScore > grinchScore) && (loraxScore > catScore) && (loraxScore > hortonScore))
+								{	alert("CS" + catScore);
+									document.getElementById("the_lorax_gif").style.display = "block";
+									document.getElementById("resultArea").style.display = "none";
+								
+								}
+								if ((catScore > grinchScore) && (catScore > loraxScore) && (catScore > hortonScore))
+								{   alert("LS" + loraxScore);
+									document.getElementById("the_cat_gif").style.display = "block";
+									document.getElementById("resultArea").style.display = "none";
+
+								}
+
+								if ((hortonScore > grinchScore) && (hortonScore > catScore) && (hortonScore > loraxScore))
+								{	alert("HS" + hortonScore);
+									document.getElementById("horton_gif").style.display = "block";
+									document.getElementById("resultArea").style.display = "none";
+
+								}
+
+							/***************************/
+							/***************************/
+
+								document.getElementById("resultArea").innerHTML =  messResult;
+								document.getElementById("resultArea").style.display = "none";
+								
+							}else{
+								alert("You must answer all of the questions to continue");
+								document.getElementById("resultArea").innerHTML =  messResult;
+								document.getElementById("resultArea").style.display = "block";
+							}
+						}
+						
+						
+						
+						
+						
+						function findValue(inputs)
+						{
+							var checkedValue;
+								
+							for (var i=0; i<inputs.length; i++)
+							{
+								if (inputs[i].checked)
+								{
+									checkedValue = inputs[i].value;
+									console.log(checkedValue);
+									//alert("inputs = " + inputs.id + " .... chaeckValue = " + checkedValue);
+								}
+							}
+							return checkedValue;
+						
+						}
+							
+							
+							
+						</script>						
+						<!-- Scripting end-->
+						
+					</td >
+					<td width="10%" align="right" valign="top">
+						<img id="the_lorax" src="images/lorax.png" alt="lorax"/>
+						<img id="the_stump" src="images/stump.png" alt="stump"/>					
+					</td>
+					<td width="25%" align="right" valign="top">
+						<img id="the_cat" src="images/CITH.png" alt="stump"/>					
+					</td>
+				</tr>
+
+			</table>
+
+		<!--/div-->
+		<br/>
+
+		<div style="margin-top:75px; text-align:center">
+		</div>
+		</div>
+	</body> 
+</html> 
